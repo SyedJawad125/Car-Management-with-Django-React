@@ -1,0 +1,8 @@
+npx create-react-app
+
+npm i react-router-dom
+
+
+
+to insert variable or function {}
+for style tag   {{}} ==  style={{width: '100px', backgroundColor: 'yellow', maxHeight: '200px'}}
