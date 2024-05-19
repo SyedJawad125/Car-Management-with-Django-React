@@ -5,7 +5,7 @@ const Services = () => {
     <div class='container' style={{ marginLeft: '200px' }}  >
                 
       <div class="about-section">
-          <h1>Good Services</h1>
+          <h1>Our Services</h1>
           <p>Some text about who we are and what we do.</p>
           <p>Resize the browser window to see that this page is responsive by the way.</p>
       </div>
