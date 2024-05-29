@@ -60,8 +60,8 @@ const Navbar = () => {
             <a href="/best">Best</a>
             <a href="/makelist">Make</a>
             <a href="/vehiclelist">Vehichle</a>
+            <a href="/buttonpage">Buttonpage</a>
             <a href="/contact">Contact</a>
-
             <a href="/login">Login</a>
 
         </div>

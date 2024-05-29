@@ -11,6 +11,8 @@ const Addvehicle = () => {
   const [purchase, setPurchase] = useState('')
   const [price, setPrice] = useState('')
   const [make, setMake] = useState('')
+  const [image, setImage] = useState(null)
+
 
   const [makeRecords, setMakeRecords] = useState([])
 
@@ -30,16 +32,30 @@ const Addvehicle = () => {
   fetchMake();
   }, [])
 
+
+
 // handleSubmit is used for data save in server.
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
 
-      const payload = {"name":name , "model":model, "color":color , "purchase_rate":purchase , "price":price, "make":make}
+
+      // preparing form data
+      const formData = new FormData();
+      formData.append('name',name)
+      formData.append('model',model)
+      formData.append('color',color)
+      formData.append('purchase_rate',purchase)
+      formData.append('price',price)
+      formData.append('make',make)
+      formData.append('image',image)
+     
+
+      // const payload = {"name":name , "model":model, "color":color , "purchase_rate":purchase , "price":price, "make":make}
       
-      const response = await axios.post('http://localhost:8000/base/vehicle', payload , {
+      const response = await axios.post('http://localhost:8000/base/vehicle', formData , {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'multipart/form-data'
         }
       });
       if (response){
@@ -95,6 +111,11 @@ const Addvehicle = () => {
           }
 
         </select>
+       
+        <div class="form-group">
+          <label for="image">Upload Image</label>
+          <input type="file" class="form-control-file" id="image" onChange={(e)=> setImage(e.target.files[0])}/>
+        </div>
 
         <button type="submit" class="btn btn-primary mt-3">Submit</button>
       </form>

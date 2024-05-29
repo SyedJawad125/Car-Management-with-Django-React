@@ -79,7 +79,7 @@ const Vehiclelist = () => {
             { records ? 
             records.map(item => (
                 <div class="card" style={{width: "18rem"}}>
-                    <img src={`${item.image}`} alt="Jane" style={ {width: '70%'} } />
+                    <img src={`http://localhost:8000/${item.image}`} alt="Jane" style={ {width: '70%'} } />
                     <div class="card-body">
                         <h5 class="card-title">{item.name}</h5>
                         <p class="card-text">{item.model}</p>
