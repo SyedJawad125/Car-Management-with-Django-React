@@ -4,7 +4,6 @@ import axios from 'axios'
 // import Card from '../components/VechileCard'   //Props
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 const Vehiclelist = () => {
 
     const navigate = useNavigate()
@@ -80,6 +79,7 @@ const Vehiclelist = () => {
             { records ? 
             records.map(item => (
                 <div class="card" style={{width: "18rem"}}>
+                    <img src={`${item.image}`} alt="Jane" style={ {width: '70%'} } />
                     <div class="card-body">
                         <h5 class="card-title">{item.name}</h5>
                         <p class="card-text">{item.model}</p>

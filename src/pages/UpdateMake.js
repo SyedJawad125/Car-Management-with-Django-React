@@ -17,7 +17,7 @@ const UpdateMake = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
+        // id=request.data
       const payload = {"id": data.id, "name":name}
       const response = await axios.patch('http://localhost:8000/base/make', payload , {
         headers: {

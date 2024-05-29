@@ -37,7 +37,7 @@ const Updatevehicle = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
+        // id=request.query_params
       const payload = {"name":name , "model":model, "color":color , "purchase_rate":purchase , "price":price, "make":make}
       
       const response = await axios.patch(`http://localhost:8000/base/vehicle?id=${data.id}`, payload , {

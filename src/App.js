@@ -13,6 +13,9 @@ import Forms from './pages/Forms'
 import UpdateVehicle from './pages/UpdateVehicle'
 import UpdateMake from './pages/UpdateMake'
 
+import Login from './pages/Login'
+
+
 
 const App = ()=>{
   return(
@@ -49,6 +52,9 @@ const App = ()=>{
         <Route path='/add/vehicle' element={<Addvehicle/>}  />
         <Route path='/update/vehicle' element={<UpdateVehicle/>}  />
         <Route path='/update/make' element={<UpdateMake/>}  />
+
+        <Route path='/login' element={<Login/>}  />
+
 
       </Routes>
 

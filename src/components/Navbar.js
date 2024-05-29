@@ -61,6 +61,9 @@ const Navbar = () => {
             <a href="/makelist">Make</a>
             <a href="/vehiclelist">Vehichle</a>
             <a href="/contact">Contact</a>
+
+            <a href="/login">Login</a>
+
         </div>
         <div class="main">
             {/* <h2>Side Navbar Example</h2>
