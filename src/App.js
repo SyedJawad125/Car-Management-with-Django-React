@@ -12,8 +12,9 @@ import Best from './pages/Best'
 import Forms from './pages/Forms'
 import UpdateVehicle from './pages/UpdateVehicle'
 import UpdateMake from './pages/UpdateMake'
-
 import Login from './pages/Login'
+import Buttonpage from './pages/Buttonpage'
+import Listpage from './pages/Listpage'
 
 
 
@@ -52,10 +53,9 @@ const App = ()=>{
         <Route path='/add/vehicle' element={<Addvehicle/>}  />
         <Route path='/update/vehicle' element={<UpdateVehicle/>}  />
         <Route path='/update/make' element={<UpdateMake/>}  />
-
+        <Route path='buttonpage' element={<Buttonpage/>}   />
+        <Route path='listpage' element={<Listpage/>}   />
         <Route path='/login' element={<Login/>}  />
-
-
       </Routes>
 
     </div>
